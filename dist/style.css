@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto",sans-serif;
+  background: black;
+}
+
+body:before, body:after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body:before {
+  background: linear-gradient(#009688, #ffeb3b);
+ clip-path:  circle(19% at 55% 30%);
+animation: ball 2s linear 2s infinite alternate forwards; 
+}
+@keyframes ball{
+
+  0% {
+    transform: rotate(45deg) scale(0.5);
+
+  }
+  100% {
+    transform: rotate(360deg) scale(1.2);
+  }
+}
+
+body:after {
+  background: linear-gradient(#2196f3, #e91e63);
+  clip-path: circle(10% at 50% 80%);
+   animation: ball 2s linear 2s infinite alternate forwards; 
+}
+
